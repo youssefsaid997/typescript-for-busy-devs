@@ -9,7 +9,7 @@ Here we will share some basics for the typescript to help developers in there jo
 // number, string, boolean, undefined, null, bigInt, Symbol
 
 // But also you can create your own type using the combination of these types and this will create other famous types such as:
-// union type , dictionary, Tuples, Enums
+// union type , Tuples, Enums
 
 // in ts we can define the type of a varibale by using : after the varibale
 

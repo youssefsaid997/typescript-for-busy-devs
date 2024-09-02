@@ -33,7 +33,6 @@ in this repo i will share my experience and knowledge in learning and working wi
 ### What are types we can create from other types?
 
 - union type =>
-- dictionary =>
 - tuple =>
 
 ---
