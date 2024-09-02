@@ -18,6 +18,24 @@ in this repo i will share my experience and knowledge in learning and working wi
 
 ### types in typescript and compound types
 
+#### before listing the types we can use and we can create we should know how to create types
+
+#### we have several ways like creating instance of classes or using interfaces or using type keyword
+
+#### But what is the different between type and interface
+
+- type -> it can be used to define types for anything in the application and the type it defines it can be object or any other compound type like union type for example.
+
+- but for interfaces it is used to create objects only.
+
+--
+
+### What are types we can create from other types?
+
+- union type =>
+- dictionary =>
+- tuple =>
+
 ---
 
 ### Design patterns in typescript
