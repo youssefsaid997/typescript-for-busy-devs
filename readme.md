@@ -32,8 +32,8 @@ in this repo i will share my experience and knowledge in learning and working wi
 
 ### What are types we can create from other types?
 
-- union type =>
-- tuple =>
+- union type => it describes which one between many options => type1 | type2 | type3
+- tuple => it is array type with specific types in specific indexes [string , number] => so the output must match this output
 
 ---
 
