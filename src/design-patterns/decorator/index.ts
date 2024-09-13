@@ -43,3 +43,48 @@ function Component(options: any) {
 
 @Component({})
 class InputComponent {}
+
+// we also can use decorator as validators
+
+class User {
+  @Min(3)
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+// by defining the function of Min and Max as wrapper around the decorator
+function Min(limit: number) {
+  return function (Target: any, propertyName: string) {
+    let value: string;
+    const setter = function (newValue: string) {
+      if (newValue.length < limit) {
+        throw new Error(`minmum length must be ${limit}`);
+      }
+
+      value = newValue;
+    };
+    const getter = function () {
+      return value;
+    };
+
+    Object.defineProperty(Target, propertyName, {
+      get: getter,
+      set: setter,
+    });
+  };
+}
+
+const user = new User("ali"); // no error will be thrown because name length = 3
+console.log(user);
+
+// but to let the field decorator to work in tsconfig change useDefineField to false
+
+const secondUser = new User("az"); // error will be thrown because length is lesser than 3
+console.log(secondUser.name);
+
+// const newUser = new User("");
+// console.log(newUser);
+
+// these validators are used in class-validator library if you want to search about
